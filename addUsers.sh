@@ -19,7 +19,7 @@ else
     #le compte $newUser n'existe pas
     # affichage message + création du compte
     echo "Création utilisateur $@"
-    useradd $@ > /dev/null
+    sudo useradd $@ > /dev/null
     #verification création du compte
     if cat /etc/passwd | grep $@ > /dev/null
     then
